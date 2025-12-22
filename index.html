@@ -235,6 +235,7 @@
 
                 <div class="hidden md:flex gap-6 border-l border-theme pl-6">
                     <a href="#features" class="text-sm text-theme-muted hover:text-[#F08E74] transition-colors mono">Features</a>
+                    <a href="#faq" class="text-sm text-theme-muted hover:text-[#F08E74] transition-colors mono">FAQ</a>
                     <a href="#contact" class="text-sm text-theme-muted hover:text-[#F08E74] transition-colors mono">Contact</a>
                 </div>
             </div>
@@ -264,14 +265,13 @@
                 <span class="text-xs text-[#F08E74] mono">LATEST: <span id="version-text">LOADING...</span></span>
             </div>
 
-            <!-- FIXED HEADLINE: Independent Gradient Spans -->
             <h1 class="text-4xl md:text-7xl font-bold mb-6 tracking-tighter">
-                <!-- Part 1: Main Text -->
+                <!-- Part 1: Main Text (Gradient) -->
                 <span class="bg-clip-text text-transparent bg-gradient-to-b from-[var(--text-main)] to-gray-500">
                     SECURE NOTE TAKING.
                 </span> 
-                <!-- Part 2: Subtitle (Independent Gradient, Larger Font) -->
-                <span class="bg-clip-text text-transparent bg-gradient-to-b from-[var(--text-main)] to-gray-500 text-2xl md:text-4xl font-semibold tracking-wide ml-2 align-baseline whitespace-nowrap">
+                <!-- Part 2: Subtitle (Solid Color) -->
+                <span class="text-xl md:text-3xl font-semibold tracking-wide text-theme-muted ml-2 align-baseline whitespace-nowrap">
                     ENCRYPTED & LOCAL.
                 </span>
             </h1>
@@ -380,9 +380,9 @@
                 <div class="glass-tile p-2 md:translate-y-12 opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 w-full max-w-[280px]" style="border-radius: 32px;">
                     <div class="aspect-[1080/2340] bg-black rounded-[24px] overflow-hidden border border-white/10 screenshot-container">
                         <img src="assets/screenshot_vault_dark.png" class="w-full h-full object-cover object-top img-dark" 
-                             alt="Avior Notes Secure Biometric Vault Screen Dark Mode" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Vault+Dark'">
+                             alt="Avior Notes Secure Biometric Vault Screen Dark Mode" loading="lazy" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Vault+Dark'">
                         <img src="assets/screenshot_vault_light.png" class="w-full h-full object-cover object-top img-light" 
-                             alt="Avior Notes Secure Biometric Vault Screen Light Mode" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Vault+Light'">
+                             alt="Avior Notes Secure Biometric Vault Screen Light Mode" loading="lazy" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Vault+Light'">
                     </div>
                 </div>
 
@@ -390,9 +390,9 @@
                 <div class="glass-tile p-2 z-10 shadow-2xl hover:scale-[1.02] transition-all duration-500 w-full max-w-[300px]" style="border-radius: 34px;">
                     <div class="aspect-[1080/2340] bg-black rounded-[26px] overflow-hidden border border-white/10 screenshot-container">
                         <img src="assets/screenshot_home_dark.png" class="w-full h-full object-cover object-top img-dark"
-                             alt="Avior Notes Home Screen with Glassmorphism UI Dark Mode" onerror="this.src='https://placehold.co/1080x2400/000/F08E74?text=Home+Dark'">
+                             alt="Avior Notes Home Screen with Glassmorphism UI Dark Mode" loading="lazy" onerror="this.src='https://placehold.co/1080x2400/000/F08E74?text=Home+Dark'">
                         <img src="assets/screenshot_home_light.png" class="w-full h-full object-cover object-top img-light"
-                             alt="Avior Notes Home Screen with Glassmorphism UI Light Mode" onerror="this.src='https://placehold.co/1080x2400/fff/F08E74?text=Home+Light'">
+                             alt="Avior Notes Home Screen with Glassmorphism UI Light Mode" loading="lazy" onerror="this.src='https://placehold.co/1080x2400/fff/F08E74?text=Home+Light'">
                     </div>
                 </div>
 
@@ -400,12 +400,60 @@
                 <div class="glass-tile p-2 md:translate-y-12 opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 w-full max-w-[280px]" style="border-radius: 32px;">
                     <div class="aspect-[1080/2340] bg-black rounded-[24px] overflow-hidden border border-white/10 screenshot-container">
                         <img src="assets/screenshot_details_dark.png" class="w-full h-full object-cover object-top img-dark"
-                             alt="Avior Notes Release Notes and Settings Screen Dark Mode" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Details+Dark'">
+                             alt="Avior Notes Release Notes and Settings Screen Dark Mode" loading="lazy" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Details+Dark'">
                         <img src="assets/screenshot_details_light.png" class="w-full h-full object-cover object-top img-light"
-                             alt="Avior Notes Release Notes and Settings Screen Light Mode" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Details+Light'">
+                             alt="Avior Notes Release Notes and Settings Screen Light Mode" loading="lazy" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Details+Light'">
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FAQ SECTION -->
+    <section id="faq" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="glass-tile p-6 group cursor-pointer">
+                    <summary class="text-lg font-bold list-none flex justify-between items-center text-[var(--text-main)]">
+                        Is Avior Notes truly offline?
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-[#F08E74]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-theme-muted leading-relaxed">
+                        Yes. Avior Notes does not have a backend server. All your data is stored locally in an encrypted SQLite database on your device. It works perfectly without an internet connection.
+                    </p>
+                </details>
+
+                <!-- Q2 -->
+                <details class="glass-tile p-6 group cursor-pointer">
+                    <summary class="text-lg font-bold list-none flex justify-between items-center text-[var(--text-main)]">
+                        How does the Biometric Vault work?
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-[#F08E74]" fill="none" viewBox="0 0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-theme-muted leading-relaxed">
+                        We use the Android Hardware Keystore to secure your notes. When you lock a note, it is encrypted using AES-256. You can only access it using your device's fingerprint or FaceID scanner.
+                    </p>
+                </details>
+
+                <!-- Q3 -->
+                <details class="glass-tile p-6 group cursor-pointer">
+                    <summary class="text-lg font-bold list-none flex justify-between items-center text-[var(--text-main)]">
+                        Can I backup my data?
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-[#F08E74]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-theme-muted leading-relaxed">
+                        Absolutely. You can export your data as an <code>.aviorbackup</code> file via the Settings menu. You can save this file to Google Drive, your SD card, or transfer it to another device.
+                    </p>
+                </details>
             </div>
         </div>
     </section>
