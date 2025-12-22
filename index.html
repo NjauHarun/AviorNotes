@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avior Notes | Private. Local. Minimal.</title>
     
+    <!-- Primary Meta Tags -->
+    <title>Avior Notes | Secure, Offline & Minimalist Note-Taking App</title>
+    <meta name="title" content="Avior Notes | Secure, Offline & Minimalist Note-Taking App">
+    <meta name="description" content="A privacy-first, offline notes app for Android featuring AES-256 encryption, biometric vault, and a stunning glassmorphism UI. No cloud, no tracking.">
+    <meta name="keywords" content="offline notes app, secure notepad, android notes, privacy focused app, glassmorphism ui, biometric lock notes, encrypted notes, local first app, flutter notes app, open source notes">
+    <meta name="author" content="NjauHarun">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://njauharun.github.io/AviorNotes/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://njauharun.github.io/AviorNotes/">
+    <meta property="og:title" content="Avior Notes | Secure & Beautiful Note Taking">
+    <meta property="og:description" content="No cloud. No leaks. Just your thoughts in a beautiful glass interface. Download the offline-first notes app today.">
+    <meta property="og:image" content="https://njauharun.github.io/AviorNotes/assets/social_preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://njauharun.github.io/AviorNotes/">
+    <meta property="twitter:title" content="Avior Notes | Secure & Beautiful Note Taking">
+    <meta property="twitter:description" content="A local-first sanctuary for your ideas. Experience the fluidity of a modern glass interface with the peace of mind of AES-256 encryption.">
+    <meta property="twitter:image" content="https://njauharun.github.io/AviorNotes/assets/social_preview.png">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    
-    <meta name="description" content="A minimalist notes app featuring local encryption and a sleek frosted glass UI.">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +42,30 @@
 
     <!-- Markdown Parser (Marked.js) -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Avior Notes",
+      "operatingSystem": "Android",
+      "applicationCategory": "ProductivityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Harun Njau"
+      },
+      "description": "A minimalist, secure, offline-first glassmorphism notes app for Android.",
+      "featureList": "Biometric Vault, Offline Storage, Glassmorphism UI, Markdown Support",
+      "screenshot": "https://njauharun.github.io/AviorNotes/assets/screenshot_home_dark.png",
+      "downloadUrl": "https://github.com/NjauHarun/AviorNotes/releases"
+    }
+    </script>
     
     <style>
         :root {
@@ -196,14 +242,14 @@
             <!-- RIGHT: GitHub & Theme Toggle -->
             <div class="flex items-center gap-6">
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="text-theme-muted hover:text-[#F08E74] transition-colors focus:outline-none">
+                <button id="theme-toggle" class="text-theme-muted hover:text-[#F08E74] transition-colors focus:outline-none" aria-label="Toggle Theme">
                     <!-- Sun Icon (Hidden by default) -->
                     <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     <!-- Moon Icon (Visible by default) -->
                     <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                 </button>
 
-                <a href="https://github.com/NjauHarun/AviorNotes" target="_blank" class="flex items-center gap-2 text-sm text-theme-muted hover:text-[#F08E74] transition-colors mono group">
+                <a href="https://github.com/NjauHarun/AviorNotes" target="_blank" class="flex items-center gap-2 text-sm text-theme-muted hover:text-[#F08E74] transition-colors mono group" aria-label="Visit Avior Notes on GitHub">
                     <span>GitHub</span>
                     <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
@@ -213,17 +259,26 @@
 
     <!-- Hero Section -->
     <header class="relative pt-40 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-5xl mx-auto text-center">
             <div id="version-badge" class="inline-block px-3 py-1 mb-6 border border-theme rounded-full bg-white/5 backdrop-blur-sm opacity-0 transition-opacity duration-1000">
                 <span class="text-xs text-[#F08E74] mono">LATEST: <span id="version-text">LOADING...</span></span>
             </div>
 
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-[var(--text-main)] to-gray-500">
-                YOUR MIND.<br>ENCRYPTED.
+            <!-- FIXED HEADLINE: Independent Gradient Spans -->
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 tracking-tighter">
+                <!-- Part 1: Main Text -->
+                <span class="bg-clip-text text-transparent bg-gradient-to-b from-[var(--text-main)] to-gray-500">
+                    SECURE NOTE TAKING.
+                </span> 
+                <!-- Part 2: Subtitle (Independent Gradient, Larger Font) -->
+                <span class="bg-clip-text text-transparent bg-gradient-to-b from-[var(--text-main)] to-gray-500 text-2xl md:text-4xl font-semibold tracking-wide ml-2 align-baseline whitespace-nowrap">
+                    ENCRYPTED & LOCAL.
+                </span>
             </h1>
+
             <p class="text-xl text-theme-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-                A local-first sanctuary for your ideas. <br>
-                Experience the fluidity of a modern glass interface with the <span class="text-[#F08E74]">peace of mind of AES-256 security.</span>
+                The ultimate <strong>offline notes app for Android</strong>. <br>
+                Experience the fluidity of a <strong>Glassmorphism UI</strong> with the peace of mind of <strong>AES-256 encryption</strong>.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -323,31 +378,31 @@
                 
                 <!-- Tile 1: Vault (Left) -->
                 <div class="glass-tile p-2 md:translate-y-12 opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 w-full max-w-[280px]" style="border-radius: 32px;">
-                    <div class="aspect-[9/19] bg-black rounded-[24px] overflow-hidden border border-white/10 screenshot-container">
+                    <div class="aspect-[1080/2340] bg-black rounded-[24px] overflow-hidden border border-white/10 screenshot-container">
                         <img src="assets/screenshot_vault_dark.png" class="w-full h-full object-cover object-top img-dark" 
-                             alt="Vault Dark" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Vault+Dark'">
+                             alt="Avior Notes Secure Biometric Vault Screen Dark Mode" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Vault+Dark'">
                         <img src="assets/screenshot_vault_light.png" class="w-full h-full object-cover object-top img-light" 
-                             alt="Vault Light" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Vault+Light'">
+                             alt="Avior Notes Secure Biometric Vault Screen Light Mode" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Vault+Light'">
                     </div>
                 </div>
 
                 <!-- Tile 2: Home (Center) -->
                 <div class="glass-tile p-2 z-10 shadow-2xl hover:scale-[1.02] transition-all duration-500 w-full max-w-[300px]" style="border-radius: 34px;">
-                    <div class="aspect-[9/19] bg-black rounded-[26px] overflow-hidden border border-white/10 screenshot-container">
+                    <div class="aspect-[1080/2340] bg-black rounded-[26px] overflow-hidden border border-white/10 screenshot-container">
                         <img src="assets/screenshot_home_dark.png" class="w-full h-full object-cover object-top img-dark"
-                             alt="Home Dark" onerror="this.src='https://placehold.co/1080x2400/000/F08E74?text=Home+Dark'">
+                             alt="Avior Notes Home Screen with Glassmorphism UI Dark Mode" onerror="this.src='https://placehold.co/1080x2400/000/F08E74?text=Home+Dark'">
                         <img src="assets/screenshot_home_light.png" class="w-full h-full object-cover object-top img-light"
-                             alt="Home Light" onerror="this.src='https://placehold.co/1080x2400/fff/F08E74?text=Home+Light'">
+                             alt="Avior Notes Home Screen with Glassmorphism UI Light Mode" onerror="this.src='https://placehold.co/1080x2400/fff/F08E74?text=Home+Light'">
                     </div>
                 </div>
 
                 <!-- Tile 3: Release Notes (Right) -->
                 <div class="glass-tile p-2 md:translate-y-12 opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 w-full max-w-[280px]" style="border-radius: 32px;">
-                    <div class="aspect-[9/19] bg-black rounded-[24px] overflow-hidden border border-white/10 screenshot-container">
+                    <div class="aspect-[1080/2340] bg-black rounded-[24px] overflow-hidden border border-white/10 screenshot-container">
                         <img src="assets/screenshot_details_dark.png" class="w-full h-full object-cover object-top img-dark"
-                             alt="Details Dark" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Details+Dark'">
+                             alt="Avior Notes Release Notes and Settings Screen Dark Mode" onerror="this.src='https://placehold.co/1080x2400/111/444?text=Details+Dark'">
                         <img src="assets/screenshot_details_light.png" class="w-full h-full object-cover object-top img-light"
-                             alt="Details Light" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Details+Light'">
+                             alt="Avior Notes Release Notes and Settings Screen Light Mode" onerror="this.src='https://placehold.co/1080x2400/eee/333?text=Details+Light'">
                     </div>
                 </div>
 
@@ -396,7 +451,7 @@
                     </div>
                 </div>
                 
-                <!-- UPDATED RIGHT COLUMN WITH LEGAL LINKS -->
+                <!-- LEGAL LINKS -->
                 <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
                     <a href="privacy.html" class="text-theme-muted hover:text-[#F08E74]">Privacy Policy</a>
                     <a href="terms.html" class="text-theme-muted hover:text-[#F08E74]">Terms of Service</a>
